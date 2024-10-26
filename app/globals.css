@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* globals.css */
+
+
+.light {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+.dark {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
+
+
+/* Default Light Mode Styles */
+body {
+  @apply bg-light-background text-light-text p-0; /* Default light mode background and text color */
+}
+
+/* Dark Mode Styles */
+.dark body {
+  @apply bg-dark-background text-dark-text p-0; /* Dark mode background and text color */
+}
+
+/* Card styles */
+.card {
+  @apply bg-light-card text-light-text; /* Light card styles */
+}
+
+.dark .card {
+  @apply bg-dark-card text-dark-text; /* Dark card styles */
+}
+
+/* Utility Classes for Other Elements */
+.text-accent {
+  @apply text-light-accent dark:text-dark-accent; /* Accent color */
+}
+
+.bg-muted {
+  @apply bg-light-muted dark:bg-dark-muted; /* Muted background */
+}
+
+.text-muted {
+  @apply text-light-muted dark:text-dark-muted; /* Muted text */
+}
+
+/* Add more utility classes as needed */
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
